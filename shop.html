@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scalability">
+		<title>Product App</title>
+		<link rel="stylesheet" type="text/css" href="shop.css">
+	</head>
+	<body>
+		
+    	<div id="nav-placeholder"></div>
+		<!--<div class="nav-bar"></div>-->
+		
+		<div id="app">
+			<div class="cart">
+				<p>Cart ({{cart}})</p>
+			</div>
+			<product1 @add-to-cart="addCart" @remove-from-cart="subtractCart"></product1>
+			<product2 @add-to-cart="addCart" @remove-from-cart="subtractCart"></product2>
+			<product3 @add-to-cart="addCart" @remove-from-cart="subtractCart"></product3>
+		</div>
+			<!--
+			 <div class="product">
+				
+				<div class="product-image">
+					<img v-bind:src="image">
+					
+				</div>
+			
+				<div class="product-info">
+					<h1>{{ product }}</h1>
+					<p v-if="inStock">{{inventory}} in Stock</p>
+					<p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
+					<button v-on:click="addToCart"
+							:disabled="!inStock"
+							:class="{ disabledButton: !inStock }"
+							>Add to Cart
+					</button>
+					<br />
+					<button v-on:click="removeFromCart"
+								:disabled="cart == 0"
+								:class="{ disabledButton: cart == 0 }"
+								>Remove from Cart</button>
+					
+					
+					
+					<div class="cart">
+						<p>Cart {{cart}}</p>
+					</div>
+				</div>
+				
+				
+			
+			</div>
+			<div class="product">
+				
+				<div class="product-image">
+					<img v-bind:src="image">
+					
+				</div>
+			
+				<div class="product-info">
+					<h1>{{ product }}</h1>
+					<p v-if="inStock">{{inventory}} in Stock</p>
+					<p v-else :class="{ outOfStock: !inStock }">No More in Stock</p>
+					<button v-on:click="addToCart"
+							:disabled="!inStock"
+							:class="{ disabledButton: !inStock }"
+							>Add to Cart
+					</button>
+					<br />
+					<button v-on:click="removeFromCart"
+								:disabled="cart == 0"
+								:class="{ disabledButton: cart == 0 }"
+								>Remove from Cart</button>
+					
+					
+					
+					<div class="cart">
+						<p>Cart {{cart}}</p>
+					</div>
+				</div>
+				
+				
+			
+			</div>
+			<div class="product">
+				
+				<div class="product-image">
+					<img v-bind:src="image">
+					
+				</div>
+			
+				<div class="product-info">
+					<h1>{{ product }}</h1>
+					<p v-if="inStock">{{inventory}} in Stock</p>
+					<p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
+					<button v-on:click="addToCart"
+							:disabled="!inStock"
+							:class="{ disabledButton: !inStock }"
+							>Add to Cart
+					</button>
+					<br />
+					<button v-on:click="removeFromCart"
+								:disabled="cart == 0"
+								:class="{ disabledButton: cart == 0 }"
+								>Remove from Cart</button>
+					
+					
+					
+					<div class="cart">
+						<p>Cart {{cart}}</p>
+					</div>
+				</div>
+				
+				
+			
+		</div>
+	-->
+		
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="shop.js"></script>
+		
+	</body>
+		
+		</html>
