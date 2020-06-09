@@ -24,6 +24,10 @@ h5 {
   margin-top: 20px;
 }
 
+.alert {
+  color: red ;
+}
+
 p {
   font-size: 22px !important;
   font-family: 'Roboto', sans-serif !important;
@@ -150,16 +154,16 @@ a:hover {
 	background-position: center;
 	background-size:cover; 
   position: relative;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
+  color: white; 
+  overflow: hidden; 
 }
 
 /* Institutions&Individuals - position of text on banner */
 .top-left {
-  position: absolute;
-  top: 400px;
-  left: 80px;
+  position: relative;
+  top: 200px;
+  left: 4%;
+  margin-right: 2%;
 }
 
 /* Individuals - space between rows */
@@ -181,8 +185,8 @@ a:hover {
 /* About - position of text on banner */
 .top-bottom-left {
   position: absolute;
-  top: 450px;
-  left: 90px;
+  top: 250px;
+  left: 5%;
 }
 
 .col-sm {
@@ -227,7 +231,10 @@ hr {
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 555px) {
+  h1{
+    font-size: 28px !important;
+  }
   h2{
     font-size: 44px !important;
   }
@@ -246,4 +253,13 @@ hr {
     margin-right: 15px;
   }
 
+  br {
+        content: ' '
+    }
+  br:after {
+        content: ' '
+    }
+ 
+
 }
+

@@ -1,126 +1,53 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scalability">
-		<title>Product App</title>
-		<link rel="stylesheet" type="text/css" href="shop.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scalability">
+    <title>Shop</title>
+    <link rel="icon" href="noun_Plant_3280351.png">
+    <link href="shop.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+    
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+		<!-- <meta name="viewport" content="width=device-width, initial-scalability">*/ -->
+		
+		<!--<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script> -->
 	</head>
-	<body>
+	<body id="shop">
+
+  
 		
     	<div id="nav-placeholder"></div>
 		<!--<div class="nav-bar"></div>-->
 		
 		<div id="app">
+      
 			<div class="cart">
-				<p>Cart ({{cart}})</p>
+        <a class="float-right m-5 btn-lg btn-primary" href="#" role="button">Cart ({{cart}})</a>
 			</div>
 			<product1 @add-to-cart="addCart" @remove-from-cart="subtractCart"></product1>
-			<product2 @add-to-cart="addCart" @remove-from-cart="subtractCart"></product2>
-			<product3 @add-to-cart="addCart" @remove-from-cart="subtractCart"></product3>
-		</div>
-			<!--
-			 <div class="product">
-				
-				<div class="product-image">
-					<img v-bind:src="image">
-					
-				</div>
-			
-				<div class="product-info">
-					<h1>{{ product }}</h1>
-					<p v-if="inStock">{{inventory}} in Stock</p>
-					<p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
-					<button v-on:click="addToCart"
-							:disabled="!inStock"
-							:class="{ disabledButton: !inStock }"
-							>Add to Cart
-					</button>
-					<br />
-					<button v-on:click="removeFromCart"
-								:disabled="cart == 0"
-								:class="{ disabledButton: cart == 0 }"
-								>Remove from Cart</button>
-					
-					
-					
-					<div class="cart">
-						<p>Cart {{cart}}</p>
-					</div>
-				</div>
-				
-				
-			
-			</div>
-			<div class="product">
-				
-				<div class="product-image">
-					<img v-bind:src="image">
-					
-				</div>
-			
-				<div class="product-info">
-					<h1>{{ product }}</h1>
-					<p v-if="inStock">{{inventory}} in Stock</p>
-					<p v-else :class="{ outOfStock: !inStock }">No More in Stock</p>
-					<button v-on:click="addToCart"
-							:disabled="!inStock"
-							:class="{ disabledButton: !inStock }"
-							>Add to Cart
-					</button>
-					<br />
-					<button v-on:click="removeFromCart"
-								:disabled="cart == 0"
-								:class="{ disabledButton: cart == 0 }"
-								>Remove from Cart</button>
-					
-					
-					
-					<div class="cart">
-						<p>Cart {{cart}}</p>
-					</div>
-				</div>
-				
-				
-			
-			</div>
-			<div class="product">
-				
-				<div class="product-image">
-					<img v-bind:src="image">
-					
-				</div>
-			
-				<div class="product-info">
-					<h1>{{ product }}</h1>
-					<p v-if="inStock">{{inventory}} in Stock</p>
-					<p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
-					<button v-on:click="addToCart"
-							:disabled="!inStock"
-							:class="{ disabledButton: !inStock }"
-							>Add to Cart
-					</button>
-					<br />
-					<button v-on:click="removeFromCart"
-								:disabled="cart == 0"
-								:class="{ disabledButton: cart == 0 }"
-								>Remove from Cart</button>
-					
-					
-					
-					<div class="cart">
-						<p>Cart {{cart}}</p>
-					</div>
-				</div>
-				
-				
 			
 		</div>
-	-->
+
+    <div class="shopAnnounce">
+      <h4>Stay tuned more Terra Nutrition Products!</h4>
+    </div>
+	
 		
 		
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="shop.js"></script>
-		
+    
+		<div id="footer-placeholder"></div>
+
 	</body>
 		
 		</html>

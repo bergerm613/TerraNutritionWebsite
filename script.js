@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#nav-placeholder").load("nav.html");
   $("#footer-placeholder").load("footer.html");
+  
 
   //true is kg, false is lb
   var switchStatus = false;
@@ -50,3 +51,18 @@ $(document).ready(function() {
     $("#outcome").text(answer);
   });
 });
+
+
+//For resizing text on banner
+$(function() {
+    var timer
+    $(window).resize(function() {
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+           if ($(window).width() < 555){
+               $('h1. br').replaceWith(' ');
+           }
+        }, 100);
+    });
+});
+

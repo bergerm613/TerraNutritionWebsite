@@ -5,62 +5,110 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Contact Us</title>
-  <link rel="icon" href="noun_Plant_3280351.png">
+	<link rel="icon" href="noun_Plant_3280351.png">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js">
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+	</script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js">
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+	</script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js">
+	</script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js">
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+	</script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+	<script src="script.js">
+	</script>
+	<script src="contact.js">
+	</script>
+
+
 </head>
 
 <body>
 
-    <!--Navigation bar-->
-  <div id="nav-placeholder"></div>
+	<!--Navigation bar-->
+	<div id="nav-placeholder"></div>
+  
+  	<!--Dialog for "successful submission"-->
+<div id="dialog_box" title="Message sent">
+		<p>We have received your message. Someone from our team will reach out shortly.</p>
+	</div>
 
-  <hr>
+	<hr>
 
-    <!--Left Column-->
-  <div class="container contact-container">
-    <div class="row">
-      <div class="col-sm med-margin justify">
-        <h1>We would love to hear from you!</h1>
-        <p>Feel free to shoot us a message or set up a courtesy appointment to discuss your needs and how we can help you.</p>
-      </div>
+	<!--Left Column-->
+  <div id ="name">
+	<div class="container contact-container"> 
+		<div class="row">
+			<div class="col-sm med-margin justify">
+        
+        <h1> Hello {{ name_input }}, <br> We would love to hear from you!</h1>
+        
+				<p>Feel free to shoot us a message or set up a courtesy appointment to discuss your needs and how we can help you.</p>
+			</div>
 
-    <!--Right Column-->
+			<!--Right Column-->
 
-      <div class="col-sm">
+			<div class="col-sm">
 
-      <!--Contact Form-->
-        <form>
-          <div class="form-group">
-            <label for="nameInput">Name</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="Name">
+				<!--Contact Form-->
+				<form>
+					<div class="form-group">
+            <div id="name">
+						<label for="name_input">Name<span id="name_requirement" class="alert">*</span></label>
+            <input type="text" class="form-control" id="name_input" v-model="name_input" placeholder="Name">
+            </div>
+					</div>
 
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <div class="form-group">
+            <label for="email_input">Email Address<span id="email_requirement" class="alert">*</span></label>
+            <input type="email" class="form-control" id="email_input" placeholder="name@example.com">
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlSelect1">TODO: DatePicker</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            </select>
+            <label for="phone_input">Phone Number<span id="phone_requirement" class="alert">*</span></label>
+            <input type="text" class="form-control" id="phone_input" placeholder="0123456789">
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your message here"></textarea>
+            <label for="date_picker">Preferred Date for Consultation</label>
+            <input type="text" class="form-control form-control-sm" id="date_picker">
+          </div>
+
+          <div class="form-group">
+            <label for="message_input">Message<span id="message_requirement" class="alert">*</span></label>
+            <textarea class="form-control" id="message_input" rows="3" placeholder="Your message here"></textarea>
           </div>
         </form>
+        
+        <div class="g-recaptcha" data-sitekey="6LdFhPcUAAAAAGzA8IgjkppuV0I2ALhDjuuhRHIp"></div>
+
+        <div class="form-group">
+            <label for="recap"> <span id="recap_requirement" class="alert"></span></label>
+        </div>
+
+        <div><button id ="submit_button" type="button" class="btn btn-primary btn-lg" onclick="validateInput()">SUBMIT</button></div>
       </div>
     </div>
   </div>
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="contact.js">
+	</script>
 
   <div id="footer-placeholder"></div>
 	
