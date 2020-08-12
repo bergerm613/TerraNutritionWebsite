@@ -27,9 +27,9 @@ Vue.component('product1', {
 			</div>`,
 			data() {
 					return {
-						product : 'Nutrition Teaching Tools & Posters',
-						image : 'https://www.gophersport.com/cmsstatic/g-26017-MyPlateClassPacks-MyPlateClassPack-36.jpg?medium',
-						inventory : 2						
+						product : 'TerraNutrition T-Shirt',
+						image : 't-shirt.png',
+						inventory : 0						
 					}
 				},
 

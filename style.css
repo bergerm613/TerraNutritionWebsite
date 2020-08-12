@@ -149,7 +149,8 @@ a:hover {
 
 /* Institutions&Individuals - dimmed banner */
 .img-cont2 {
-  background-image:linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url(bannerTurned.jpg);
+  background-image:linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url(assorted-spices-on-brown-wooden-table-beside-red-and-white-1435895.jpg);
+  /*bannerTurned.jpg*/
   height: 70vh;
 	background-position: center;
 	background-size:cover; 
@@ -161,8 +162,8 @@ a:hover {
 /* Institutions&Individuals - position of text on banner */
 .top-left {
   position: relative;
-  top: 200px;
-  left: 4%;
+  top: 55%;
+  left: 33%;
   margin-right: 2%;
 }
 
@@ -185,8 +186,8 @@ a:hover {
 /* About - position of text on banner */
 .top-bottom-left {
   position: absolute;
-  top: 250px;
-  left: 5%;
+  top: 55%;
+  left: 45%;
 }
 
 .col-sm {
@@ -246,6 +247,14 @@ hr {
   }
   p {
     font-size: 17px !important;
+  }
+
+  .top-left {
+    left: 2%;
+  }
+
+  .top-bottom-left {
+  left: 2%;
   }
 
   .med-margin {

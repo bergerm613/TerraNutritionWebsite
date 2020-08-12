@@ -172,8 +172,14 @@ hr {
 
   .product-image {
     width: 80%;
-    padding-top: 20px;
+    padding-top: 50px;
   }
+
+  .product-info {
+    padding-top: 50px;
+    width: 50%;
+  }
+  
 
 }
 

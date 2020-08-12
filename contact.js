@@ -1,4 +1,7 @@
-
+$("document").ready( function () {
+        alert("The contact page is currently under construction. The messages will not be sent nor will the appointment chosen be booked. Sorry for the inconvenience.You can contact us via terraNutrition@gmail.com");
+    }); 
+ 
  $(function() {
         $( "#dialog_box" ).dialog({
            autoOpen: false,  
