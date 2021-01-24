@@ -1,3 +1,5 @@
+Check it out live [here](https://bergerm613.github.io/WebFinalProjectSpring2020/index.html).
+
 ## About
 This website was made as a collaborative project for Terra Nutrition (a Registered Dietary Nutritionist) to demonstrate proficiency in the following technologies:
 * HTML
@@ -6,3 +8,5 @@ This website was made as a collaborative project for Terra Nutrition (a Register
 * jQuery
 * Bootstrap
 * Vue.js
+
+_made by Michelle Berger, Ricki Piekes, and Sara Orlian_
