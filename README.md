@@ -9,4 +9,4 @@ This website was made as a collaborative project for Terra Nutrition (a Register
 * Bootstrap
 * Vue.js
 
-_made by Michelle Berger, Ricki Piekes, and Sara Orlian_
+_Built by Michelle Berger, Ricki Piekes, and Sara Orlian._
